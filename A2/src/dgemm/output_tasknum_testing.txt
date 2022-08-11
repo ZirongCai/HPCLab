@@ -1,0 +1,13 @@
+nTeams 	 Microkernel 	 GEBP 	 GEMM
+ 7 	  	  	 
+Optimised DGEMM is incorrect. Error: 4.588343e+12
+Microkernel: 2.944633 ms, 27.820105 GFLOP/s
+GEBP: 8.782808 ms, 95.511686 GFLOP/s
+GEMM: 16402.058952 ms, 104.742150 GFLOP/s
+14 	 incorrect. 	 27.155006 	 115.229778
+84.049759 	  	  	 
+Optimised DGEMM is incorrect. Error: 3.478464e+12
+Microkernel: 2.933262 ms, 27.927952 GFLOP/s
+GEBP: 8.286854 ms, 101.227897 GFLOP/s
+GEMM: 19280.808991 ms, 89.103467 GFLOP/s
+14 	  	  	 

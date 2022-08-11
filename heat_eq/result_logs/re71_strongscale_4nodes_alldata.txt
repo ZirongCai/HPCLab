@@ -1,0 +1,449 @@
+---------------Topology: 1 x 192 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 1 192 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+[i01r01c02s10:1179285] *** Process received signal ***
+[i01r01c02s10:1179285] Signal: Segmentation fault (11)
+[i01r01c02s10:1179285] Signal code: Address not mapped (1)
+[i01r01c02s10:1179285] Failing at address: 0x122e000
+[i01r01c02s10:1179285] [ 0] /lib64/libpthread.so.0(+0x10c10)[0x7f4b0425ac10]
+[i01r01c02s10:1179285] [ 1] ./heat[0x408f10]
+[i01r01c02s10:1179285] [ 2] ./heat[0x407f18]
+[i01r01c02s10:1179285] [ 3] ./heat[0x402c9a]
+[i01r01c02s10:1179285] [ 4] /lib64/libc.so.6(__libc_start_main+0xf5)[0x7f4b03ec5725]
+[i01r01c02s10:1179285] [ 5] ./heat[0x402629]
+[i01r01c02s10:1179285] *** End of error message ***
+[i01r01c02s10:1179297] *** An error occurred in MPI_Type_vector
+[i01r01c02s10:1179297] *** reported by process [140566798073857,140720308486325]
+[i01r01c02s10:1179297] *** on communicator MPI_COMM_WORLD
+[i01r01c02s10:1179297] *** MPI_ERR_COUNT: invalid count argument
+[i01r01c02s10:1179297] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[i01r01c02s10:1179297] ***    and potentially your MPI job)
+[i01r01c01s12.sng.lrz.de:561508] 23 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[i01r01c01s12.sng.lrz.de:561508] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 2 x 96 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 2 96 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+[i01r01c02s01:1526367] *** Process received signal ***
+[i01r01c02s01:1526367] Signal: Segmentation fault (11)
+[i01r01c02s01:1526367] Signal code: Address not mapped (1)
+[i01r01c02s01:1526367] Failing at address: 0x1259000
+[i01r01c02s10:1179543] *** An error occurred in MPI_Type_vector
+[i01r01c02s10:1179543] *** reported by process [140652691062785,140724603453628]
+[i01r01c02s10:1179543] *** on communicator MPI_COMM_WORLD
+[i01r01c02s10:1179543] *** MPI_ERR_COUNT: invalid count argument
+[i01r01c02s10:1179543] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[i01r01c02s10:1179543] ***    and potentially your MPI job)
+[i01r01c02s01:1526367] [ 0] /lib64/libpthread.so.0(+0x10c10)[0x7f1a01aadc10]
+[i01r01c02s01:1526367] [ 1] ./heat[0x408bc1]
+[i01r01c02s01:1526367] [ 2] ./heat[0x407eb7]
+[i01r01c02s01:1526367] [ 3] ./heat[0x402c9a]
+[i01r01c02s01:1526367] [ 4] /lib64/libc.so.6(__libc_start_main+0xf5)[0x7f1a01718725]
+[i01r01c02s01:1526367] [ 5] ./heat[0x402629]
+[i01r01c02s01:1526367] *** End of error message ***
+[i01r01c02s10:1179555] *** Process received signal ***
+[i01r01c02s10:1179555] Signal: Segmentation fault (11)
+[i01r01c02s10:1179555] Signal code: Address not mapped (1)
+[i01r01c02s10:1179555] Failing at address: 0x1674000
+[i01r01c02s10:1179555] [ 0] /lib64/libpthread.so.0(+0x10c10)[0x7f39af6ecc10]
+[i01r01c02s10:1179555] [ 1] ./heat[0x408bc1]
+[i01r01c02s10:1179555] [ 2] ./heat[0x407eb7]
+[i01r01c02s10:1179555] [ 3] ./heat[0x402c9a]
+[i01r01c02s10:1179555] [ 4] /lib64/libc.so.6(__libc_start_main+0xf5)[0x7f39af357725]
+[i01r01c02s10:1179555] [ 5] ./heat[0x402629]
+[i01r01c02s10:1179555] *** End of error message ***
+[i01r01c01s12.sng.lrz.de:561861] 7 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[i01r01c01s12.sng.lrz.de:561861] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 3 x 64 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 3 64 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+Error: Cannot allocate memory
+Error in Jacobi initialization.
+
+Usage: ./heat <input file> [<N> <M>] [result file]
+
+[i01r01c02s10:1179801] *** An error occurred in MPI_Type_vector
+[i01r01c02s10:1179801] *** reported by process [140648379449345,140720308486335]
+[i01r01c02s10:1179801] *** on communicator MPI_COMM_WORLD
+[i01r01c02s10:1179801] *** MPI_ERR_COUNT: invalid count argument
+[i01r01c02s10:1179801] *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+[i01r01c02s10:1179801] ***    and potentially your MPI job)
+[i01r01c01s12.sng.lrz.de:562119] 2 more processes have sent help message help-mpi-errors.txt / mpi_errors_are_fatal
+[i01r01c01s12.sng.lrz.de:562119] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 4 x 48 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 4 48 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.000843 | 0.165178 |    347.784 |  36.91 |
+|     2000 | 0.001371 | 0.330234 |    817.068 |  52.19 |
+|     3000 | 0.004136 | 0.495280 |    609.738 |  63.91 |
+|     4000 | 0.006707 | 0.660324 |    667.977 |  73.80 |
+|     5000 | 0.012329 | 0.825367 |    568.151 |  82.50 |
+|     6000 | 0.026704 | 0.990409 |    378.046 |  90.38 |
+|     7000 | 0.043634 | 1.155452 |    314.465 |  97.62 |
+|     8000 | 0.063912 | 1.320494 |    280.398 | 104.36 |
+|     9000 | 0.085335 | 1.485536 |    265.787 | 110.68 |
+|    10000 | 0.107981 | 1.650577 |    259.307 | 116.67 |
+|    11000 | 0.135307 | 1.815619 |    250.400 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 6 x 32 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 6 32 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.000897 | 0.165178 |    330.459 |  36.91 |
+|     2000 | 0.001531 | 0.330234 |    731.629 |  52.19 |
+|     3000 | 0.003468 | 0.495280 |    726.819 |  63.91 |
+|     4000 | 0.006869 | 0.660324 |    652.217 |  73.80 |
+|     5000 | 0.012322 | 0.825367 |    568.981 |  82.50 |
+|     6000 | 0.025181 | 0.990409 |    401.900 |  90.38 |
+|     7000 | 0.042730 | 1.155452 |    321.088 |  97.62 |
+|     8000 | 0.062549 | 1.320494 |    286.499 | 104.36 |
+|     9000 | 0.085629 | 1.485536 |    264.875 | 110.68 |
+|    10000 | 0.109384 | 1.650577 |    255.989 | 116.67 |
+|    11000 | 0.135660 | 1.815619 |    249.747 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 8 x 24 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 8 24 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.000916 | 0.165178 |    326.695 |  36.91 |
+|     2000 | 0.001551 | 0.330234 |    722.136 |  52.19 |
+|     3000 | 0.003728 | 0.495280 |    675.981 |  63.91 |
+|     4000 | 0.006390 | 0.660324 |    701.100 |  73.80 |
+|     5000 | 0.012464 | 0.825367 |    561.927 |  82.50 |
+|     6000 | 0.025383 | 0.990409 |    399.386 |  90.38 |
+|     7000 | 0.047310 | 1.155452 |    292.218 |  97.62 |
+|     8000 | 0.065729 | 1.320494 |    274.116 | 104.36 |
+|     9000 | 0.085329 | 1.485536 |    265.800 | 110.68 |
+|    10000 | 0.108652 | 1.650577 |    257.704 | 116.67 |
+|    11000 | 0.135180 | 1.815619 |    250.633 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 12 x 16 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 12 16 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.000966 | 0.165178 |    309.406 |  36.91 |
+|     2000 | 0.001618 | 0.330234 |    692.249 |  52.19 |
+|     3000 | 0.003697 | 0.495280 |    681.564 |  63.91 |
+|     4000 | 0.006512 | 0.660324 |    688.011 |  73.80 |
+|     5000 | 0.011963 | 0.825367 |    586.070 |  82.50 |
+|     6000 | 0.024325 | 0.990409 |    416.317 |  90.38 |
+|     7000 | 0.044410 | 1.155452 |    310.289 |  97.62 |
+|     8000 | 0.063660 | 1.320494 |    281.558 | 104.36 |
+|     9000 | 0.085286 | 1.485536 |    265.937 | 110.68 |
+|    10000 | 0.108948 | 1.650577 |    257.004 | 116.67 |
+|    11000 | 0.135280 | 1.815619 |    250.448 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 16 x 12 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 16 12 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.001026 | 0.165178 |    289.967 |  36.91 |
+|     2000 | 0.001778 | 0.330234 |    630.068 |  52.19 |
+|     3000 | 0.003874 | 0.495280 |    650.486 |  63.91 |
+|     4000 | 0.006937 | 0.660324 |    646.069 |  73.80 |
+|     5000 | 0.012583 | 0.825367 |    556.407 |  82.50 |
+|     6000 | 0.026318 | 0.990409 |    388.495 |  90.38 |
+|     7000 | 0.042873 | 1.155452 |    320.039 |  97.62 |
+|     8000 | 0.063433 | 1.320494 |    282.513 | 104.36 |
+|     9000 | 0.085769 | 1.485536 |    264.433 | 110.68 |
+|    10000 | 0.110072 | 1.650577 |    254.379 | 116.67 |
+|    11000 | 0.136683 | 1.815619 |    247.875 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 24 x 8 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 24 8 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.001176 | 0.165178 |    250.266 |  36.91 |
+|     2000 | 0.002034 | 0.330234 |    550.865 |  52.19 |
+|     3000 | 0.004470 | 0.495280 |    563.831 |  63.91 |
+|     4000 | 0.007390 | 0.660324 |    606.276 |  73.80 |
+|     5000 | 0.013352 | 0.825367 |    524.568 |  82.50 |
+|     6000 | 0.024293 | 0.990409 |    415.250 |  90.38 |
+|     7000 | 0.043779 | 1.155452 |    313.793 |  97.62 |
+|     8000 | 0.065494 | 1.320494 |    273.935 | 104.36 |
+|     9000 | 0.087639 | 1.485536 |    258.793 | 110.68 |
+|    10000 | 0.111753 | 1.650577 |    250.571 | 116.67 |
+|    11000 | 0.139152 | 1.815619 |    243.476 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+---------------Topology: 48 x 4 ------------------
+Using topology info from command line
+Using non-blocking communication
+This test uses Cartesian topology! 
+Resolutions       : (1000, 2000, ... 11000)
+Iterations        : 40
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Domain distribution 48 4 
+|      Res |     Time | Residual |     GFlops |   Norm |
+|----------|----------|----------|------------|--------|
+|     1000 | 0.001671 | 0.165178 |    171.625 |  36.91 |
+|     2000 | 0.002923 | 0.330234 |    383.182 |  52.19 |
+|     3000 | 0.005898 | 0.495280 |    427.322 |  63.91 |
+|     4000 | 0.009523 | 0.660324 |    470.546 |  73.80 |
+|     5000 | 0.013875 | 0.825367 |    526.852 |  82.50 |
+|     6000 | 0.026011 | 0.990409 |    387.547 |  90.38 |
+|     7000 | 0.046131 | 1.155452 |    297.416 |  97.62 |
+|     8000 | 0.067688 | 1.320494 |    264.753 | 104.36 |
+|     9000 | 0.092100 | 1.485536 |    246.258 | 110.68 |
+|    10000 | 0.117293 | 1.650577 |    238.720 | 116.67 |
+|    11000 | 0.145112 | 1.815619 |    233.487 | 122.37 |
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 

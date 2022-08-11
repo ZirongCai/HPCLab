@@ -1,0 +1,37 @@
+
+CPU Model =  Intel(R) Xeon(R) CPU E5-2697 v3 @ 2.60GHz
+
+Sockets/Cores/Threads:
+	num_sockets          = 2
+	num_cores_total      = 28
+	num_cores_per_socket = 14
+	num_threads_per_core = 2
+	Hyper-Threading      = true
+
+NUMA:
+	num_numa_domains            = 4
+	num_numa_domains_per_socket = 2
+	num_cores_per_numa_domain   = 7
+
+Memory = 131.17 GB
+
+CPU Caches:
+	L1_cache = 32K (8-way)
+	L2_cache = 256K (8-way)
+	L3_cache = 17920K (20-way)
+	L3_cache_per_sock = 35840 KB
+	L3_cache_per_core = 2560 KB
+
+OS:
+Operating System       = SUSE Linux Enterprise Server 15 SP1
+Kernel version         = 4.12.14-197.78-default
+CPU Turbo Boost        = enabled
+CPU Scaling Governor   = powersave
+CPU Scaling Driver     = intel_pstate
+Transparent Huge Pages = enabled
+
+ICC version = icc (ICC) 19.0.5.281 20190815
+Target ISA  = avx2
+Hostname    = cm2login4.cos.lrz.de
+Date        = Wed Nov 17 22:15:18 CET 2021
+

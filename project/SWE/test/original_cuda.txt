@@ -1,0 +1,139 @@
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using riemann solver augRie
+-- Found NetCDF: /nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/netcdf-c-4.6.1-pq4b6322rpmphjgbd6pveyo5p6m2sbl7/lib/libnetcdf.so  
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- Found MPI_CXX: /nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/openmpi-4.0.1-ccnbskwqvkx27dnyjnj4yay6lhbwqtqy/lib/libmpi.so (found version "3.1") 
+-- Found MPI: TRUE (found version "3.1")  
+-- OpenMP supported loop parallelization is enabled.
+-- OpenMP vectorization is disabled.
+-- Enabled NetCDF writer
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/home/ge59let/hpclab/project/SWE/test/build
+Scanning dependencies of target swe
+[ 41%] Building CXX object CMakeFiles/swe.dir/src/blocks/SWE_Block.cpp.o
+[ 41%] Building CXX object CMakeFiles/swe.dir/src/blocks/SWE_WaveAccumulationBlock.cpp.o
+[ 41%] Building CXX object CMakeFiles/swe.dir/src/tools/Logger.cpp.o
+[ 41%] Building CXX object CMakeFiles/swe.dir/src/writer/Writer.cpp.o
+[ 41%] Building CXX object CMakeFiles/swe.dir/src/writer/NetCdfWriter.cpp.o
+[ 50%] Linking CXX static library libswe.a
+[ 50%] Built target swe
+Scanning dependencies of target swe-single-node
+Scanning dependencies of target swe-test
+Scanning dependencies of target swe-mpi
+[ 75%] Building CXX object CMakeFiles/swe-mpi.dir/src/examples/swe_mpi.cpp.o
+[ 75%] Building CXX object CMakeFiles/swe-test.dir/src/examples/swe_test.cpp.o
+[ 75%] Building CXX object CMakeFiles/swe-single-node.dir/src/examples/swe_simple.cpp.o
+[ 83%] Linking CXX executable swe-single-node
+[ 91%] Linking CXX executable swe-mpi
+[100%] Linking CXX executable swe-test
+[100%] Built target swe-single-node
+[100%] Built target swe-mpi
+[100%] Built target swe-test
+-- The CUDA compiler identification is NVIDIA 11.4.100
+-- Check for working CUDA compiler: /nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/bin/nvcc
+-- Check for working CUDA compiler: /nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/bin/nvcc -- works
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Using riemann solver augRie
+-- Found OpenMP_CXX: -fopenmp  
+-- Found OpenMP: TRUE   
+-- OpenMP supported loop parallelization is enabled.
+-- OpenMP vectorization is disabled.
+-- Enabled NetCDF writer
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/home/ge59let/hpclab/project/SWE/test/build
+Scanning dependencies of target swe
+[ 40%] Building CXX object CMakeFiles/swe.dir/src/blocks/SWE_Block.cpp.o
+[ 40%] Building CXX object CMakeFiles/swe.dir/src/writer/Writer.cpp.o
+[ 53%] Building CXX object CMakeFiles/swe.dir/src/writer/NetCdfWriter.cpp.o
+[ 53%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_WavePropagationBlockCuda_kernels.cu.o
+[ 53%] Building CXX object CMakeFiles/swe.dir/src/tools/Logger.cpp.o
+[ 53%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_BlockCUDA.cu.o
+[ 53%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_WavePropagationBlockCuda.cu.o
+[ 53%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_BlockCUDA_kernels.cu.o
+[ 60%] Linking CXX static library libswe.a
+[ 60%] Built target swe
+Scanning dependencies of target swe-mpi
+Scanning dependencies of target swe-test
+Scanning dependencies of target swe-single-node
+[ 80%] Building CXX object CMakeFiles/swe-test.dir/src/examples/swe_test.cpp.o
+[ 80%] Building CXX object CMakeFiles/swe-mpi.dir/src/examples/swe_mpi.cpp.o
+[ 80%] Building CXX object CMakeFiles/swe-single-node.dir/src/examples/swe_simple.cpp.o
+[ 86%] Linking CXX executable swe-single-node
+[ 93%] Linking CXX executable swe-mpi
+[100%] Linking CXX executable swe-test
+[100%] Built target swe-single-node
+[100%] Built target swe-mpi
+[100%] Built target swe-test
+-- Using riemann solver augRie
+-- OpenMP supported loop parallelization is enabled.
+-- OpenMP vectorization is disabled.
+-- Enabled NetCDF writer
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /u/home/ge59let/hpclab/project/SWE/test/build
+Scanning dependencies of target swe
+[ 46%] Building CXX object CMakeFiles/swe.dir/src/tools/Logger.cpp.o
+[ 46%] Building CXX object CMakeFiles/swe.dir/src/writer/NetCdfWriter.cpp.o
+[ 46%] Building CXX object CMakeFiles/swe.dir/src/blocks/SWE_Block.cpp.o
+[ 46%] Building CXX object CMakeFiles/swe.dir/src/writer/Writer.cpp.o
+[ 46%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_WavePropagationBlockCudaAwareMPI.cu.o
+[ 46%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_WavePropagationBlockCuda_kernels.cu.o
+[ 46%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_BlockCUDA_kernels.cu.o
+[ 46%] Building CUDA object CMakeFiles/swe.dir/src/blocks/cuda/SWE_BlockCudaAwareMPI.cu.o
+[ 60%] Linking CXX static library libswe.a
+[ 60%] Built target swe
+Scanning dependencies of target swe-mpi
+Scanning dependencies of target swe-single-node
+Scanning dependencies of target swe-test
+[ 66%] Building CXX object CMakeFiles/swe-mpi.dir/src/examples/swe_mpi.cpp.o
+[ 80%] Building CXX object CMakeFiles/swe-single-node.dir/src/examples/swe_simple.cpp.o
+[ 80%] Building CXX object CMakeFiles/swe-test.dir/src/examples/swe_test.cpp.o
+[ 86%] Linking CXX executable swe-single-node
+[ 93%] Linking CXX executable swe-mpi
+[100%] Linking CXX executable swe-test
+[100%] Built target swe-single-node
+[100%] Built target swe-test
+[100%] Built target swe-mpi
+* TEST: 1 mpi vs. 1 cuda *
+Error: 0.0275436000
+
+* TEST: 1 mpi vs. 1 cuda-aware *
+Error: 0.0275436000
+
+* TEST: 1 cuda vs 1 cuda-aware *
+Error: 0.0000000000
+
+* TEST: 1 mpi vs. 4 mpi *
+Error: 0.0372890000
+
+* TEST: 1 cuda vs. 4 cuda *
+Error: 29929.4468154000
+
+* TEST: 1 cuda-aware vs. 4 cuda-aware *
+Error: 0.0000000000
+
+* TEST: 1 mpi vs. 4 cuda *
+Error: 29929.4505342000
+
+* TEST: 1 mpi vs. 4 cuda-aware *
+Error: 0.0275436000
+
+* TEST: 4 mpi vs. 4 cuda *
+Error: 29929.4514532000
+
+* TEST: 4 cuda vs 4 cuda-aware *
+Error: 29929.4468154000
+
+* TEST: 4 mpi vs. 4 cuda-aware *
+Error: 0.0460306000
+

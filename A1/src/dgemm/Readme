@@ -1,0 +1,20 @@
+# How to compile
+
+In the Makefile, one can specify parameters for the compilation.  
+
+## Implementation 1
+One needs to have `OPT=2` to test the Implementation 1.
+Besides, M, N, BLOCK_SIZE, and ALIGNMENT need to be specified
+
+## Implementation 2
+One needs to have `OPT=1` to test the Implementation 2.
+Besides, M, N, m_c, k_c, m_r, n_r, and ALIGNMENT need to be specified following these requirements:  
+- K is a multiple number of k_c  
+- M is a multiple number of m_c  
+- m_c is a multiple number of m_r  
+- N is a multiple number of n_r  
+
+## Vectorization report
+
+One can check optimization report by removing the comments in the 26
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconv_simd.a  CMakeFiles/conv_simd.dir/convolution.cpp.o
+/usr/bin/ranlib libconv_simd.a

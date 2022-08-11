@@ -1,0 +1,29 @@
+#!/bin/bash
+
+##SBATCH -J stream
+##SBATCH -D ./
+###SBATCH --get-user-env
+##SBATCH --time=00:15:00
+##SBATCH --mem=2000
+##SBATCH --clusters=serial
+##SBATCH --partition=serial_std
+###SBATCH --clusters=cm2_tiny
+###SBATCH --partition=cm2_tiny
+##SBATCH -N 1
+##SBATCH --cpus-per-task=1
+#
+#module load slurm_setup
+
+
+RES="output_scanning_2.3.txt"
+printf "%s \t %s \t %s \t %s \t %s\n " "Array size" "Copy" "Scale" "Add" "Triad" > $RES
+
+for i in {10..24} ; do
+#for array_size in 4096 32768 2293760; do
+    array_size=$((2**${i}))
+    make clean
+    make cpu=avx2 rfo=1 size=${array_size}
+    ./stream_avx2.bin > out.txt
+    printf "%s \t %s \t %s \t %s \t %s \n" "${array_size}" $(tail -n7 out.txt | head -n4 | tr -s " "| cut -d " " -f 2 | tr "\n" "\t") >> $RES
+	rm out.txt	
+done

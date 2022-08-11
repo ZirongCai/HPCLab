@@ -1,0 +1,44 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 326K of event 'cycles:ppp'
+# Event count (approx.): 250670272487
+#
+# Overhead      Pid:Command  
+# ........  .................
+#
+     3.73%    24111:quicksort
+     3.57%    24125:quicksort
+     3.57%    24129:quicksort
+     3.57%    24128:quicksort
+     3.57%    24132:quicksort
+     3.57%    24112:quicksort
+     3.57%    24122:quicksort
+     3.57%    24117:quicksort
+     3.57%    24119:quicksort
+     3.57%    24120:quicksort
+     3.57%    24135:quicksort
+     3.57%    24137:quicksort
+     3.57%    24138:quicksort
+     3.57%    24114:quicksort
+     3.57%    24130:quicksort
+     3.57%    24127:quicksort
+     3.57%    24126:quicksort
+     3.56%    24134:quicksort
+     3.56%    24123:quicksort
+     3.56%    24116:quicksort
+     3.56%    24113:quicksort
+     3.56%    24115:quicksort
+     3.56%    24124:quicksort
+     3.56%    24118:quicksort
+     3.56%    24136:quicksort
+     3.56%    24121:quicksort
+     3.56%    24133:quicksort
+     3.56%    24131:quicksort
+
+
+#
+# (Tip: Customize output of perf script with: perf script -F event,ip,sym)
+#

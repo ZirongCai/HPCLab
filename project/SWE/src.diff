@@ -1,0 +1,22 @@
+--- src/blocks/cuda/SWE_BlockCUDA.cu    2022-01-29 19:46:27.804987847 +0100
++++ src/blocks/cuda/SWE_BlockCUDA.cu    2022-01-29 19:47:22.557600422 +0100
+@@ -179,6 +179,8 @@
+ #endif
+   // Fill ghost layer corner cells
+   kernelHdBufferEdges<<<1,1>>>(hd, nx, ny);
++  kernelHdBufferEdges<<<1,1>>>(hud, nx, ny);
++  kernelHdBufferEdges<<<1,1>>>(hvd, nx, ny);
+
+ #ifdef DBG
+  cout << "Call kernel to compute left/right boundaries " << flush << endl;
+@@ -186,6 +188,10 @@
+ //   synchWaterHeightAfterWrite();
+ //   synchDischargeAfterWrite();
+
++#ifdef USEMPI
++   synchGhostLayerAfterWrite();
++#endif
++
+   if (boundary[BND_LEFT] == PASSIVE || boundary[BND_LEFT] == CONNECT) {
+      // nothing to be done:
+      // ghost values are copied by SWE_BlockCUDA::synchGhostLayerAfterWrite(...)

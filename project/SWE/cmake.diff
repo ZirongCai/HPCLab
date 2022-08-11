@@ -1,0 +1,12 @@
+*** CMakeLists.txt	2022-01-28 08:15:40.828780367 +0000
+--- CMakeLists.txt	2022-01-28 08:15:32.277245730 +0000
+***************
+*** 72,77 ****
+--- 72,78 ----
+      target_link_libraries(swe-mpi PRIVATE ${MPI_CXX_LIBRARIES})
+      target_include_directories(swe-mpi PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+      target_include_directories(swe-mpi PRIVATE ${MPI_CXX_INCLUDE_DIRS})
++     add_definitions(-DUSEMPI)
+  endif()
+  
+  if (OpenMP_FOUND AND ENABLE_OPENMP)

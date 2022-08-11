@@ -1,0 +1,3 @@
+K=128   M=32   N=32   m_c=32   k_c=32   m_r=32   n_r=2 	 20.996039 GFLOPs
+K=128   M=32   N=32   m_c=32   k_c=32   m_r=32   n_r=2 	 21.080029 GFLOPs
+K=128   M=32   N=32   m_c=32   k_c=32   m_r=32   n_r=2 	 21.480609 GFLOPs

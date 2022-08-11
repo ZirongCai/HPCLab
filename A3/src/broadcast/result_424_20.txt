@@ -1,0 +1,2 @@
+DataSize     nPRC    TrivialExeTime 	TreeExeTime 	MPI_BcastExeTime
+20 		4 		4.75105e-07 		 4.32139e-07 		 4.37905e-07 	 

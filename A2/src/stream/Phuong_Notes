@@ -1,0 +1,2 @@
+make cpu=avx2 size=9175040
+./stream_avx2.bin

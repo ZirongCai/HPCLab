@@ -1,0 +1,65 @@
+Generating SQLite file profile_cuda_aware_512_1.sqlite from profile_cuda_aware_512_1.qdrep
+Using profile_cuda_aware_512_1.sqlite for SQL queries.
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/cudaapisum.py profile_cuda_aware_512_1.sqlite]... 
+
+ Time(%)  Total Time (ns)  Num Calls   Average    Minimum   Maximum     StdDev             Name         
+ -------  ---------------  ---------  ----------  -------  ---------  -----------  ---------------------
+    60.0        220350542          4  55087635.5    17153  220284946  110131540.5  cudaMallocManaged    
+    29.5        108332939        992    109206.6     1683    9066257     330779.4  cudaDeviceSynchronize
+     5.0         18395869       2728      6743.4     4288    1303164      24909.1  cudaLaunchKernel     
+     1.8          6517719        496     13140.6     9909      22654       2416.3  cudaMemcpyAsync      
+     1.6          5877037        752      7815.2     3016     446214      23754.2  cudaMalloc           
+     1.3          4654389        756      6156.6     2445     219751      20564.9  cudaFree             
+     0.9          3130526       1240      2524.6     1032      12704       1353.3  cudaStreamSynchronize
+     0.0           103686        373       278.0      160       6482        390.4  cuGetProcAddress     
+     0.0             1503          1      1503.0     1503       1503          0.0  cuInit               
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/gpukernsum.py profile_cuda_aware_512_1.sqlite]... 
+
+ Time(%)  Total Time (ns)  Instances  Average   Minimum  Maximum   StdDev                                                   Name                                                
+ -------  ---------------  ---------  --------  -------  -------  --------  ----------------------------------------------------------------------------------------------------
+    82.9         86256136        744  115935.7     4736   869215  168668.5  computeNetUpdatesKernel(float const*, float const*, float const*, float const*, float*, float*, flo…
+     7.7          8009299        248   32295.6    30336    94816    4027.7  updateUnknownsKernel(float const*, float const*, float const*, float const*, float const*, float co…
+     3.0          3101311        248   12505.3     3007  1557756   99867.1  kernelBottomBoundary(float*, float*, float*, int, int, BoundaryType)                                
+     2.0          2039100        248    8222.2     3136   969470   61296.4  kernelLeftBoundary(float*, float*, float*, int, int, BoundaryType)                                  
+     1.6          1669057        248    6730.1     2976   184768   19243.6  kernelRightBoundary(float*, float*, float*, int, int, BoundaryType)                                 
+     1.0          1047125        248    4222.3     2527   228831   16969.4  kernelTopBoundary(float*, float*, float*, int, int, BoundaryType)                                   
+     0.9           944986        248    3810.4     3328     4224      94.9  void thrust::cuda_cub::core::_kernel_agent<thrust::cuda_cub::__reduce::ReduceAgent<thrust::zip_iter…
+     0.5           560440        248    2259.8     2112     2656      67.7  void thrust::cuda_cub::core::_kernel_agent<thrust::cuda_cub::__parallel_for::ParallelForAgent<thrus…
+     0.4           429120        248    1730.3     1600     2048      59.4  void thrust::cuda_cub::core::_kernel_agent<thrust::cuda_cub::__parallel_for::ParallelForAgent<thrus…
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/gpumemtimesum.py profile_cuda_aware_512_1.sqlite]... 
+
+ Time(%)  Total Time (ns)  Operations  Average  Minimum  Maximum  StdDev              Operation            
+ -------  ---------------  ----------  -------  -------  -------  ------  ---------------------------------
+    53.9          5180799        2439   2124.1      383    73887  3009.6  [CUDA Unified Memory memcpy HtoD]
+    40.0          3851415        2714   1419.1     1151    29248  1050.0  [CUDA Unified Memory memcpy DtoH]
+     6.1           586977         496   1183.4     1055     1632    98.4  [CUDA memcpy DtoH]               
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/gpumemsizesum.py profile_cuda_aware_512_1.sqlite]... 
+
+   Total    Operations  Average  Minimum  Maximum   StdDev              Operation            
+ ---------  ----------  -------  -------  --------  ------  ---------------------------------
+     4.844         496    0.010    0.004     0.016   0.006  [CUDA memcpy DtoH]               
+ 20856.000        2439    8.551    4.000  1016.000  42.643  [CUDA Unified Memory memcpy HtoD]
+ 15760.000        2714    5.807    4.000   508.000  20.188  [CUDA Unified Memory memcpy DtoH]
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/osrtsum.py profile_cuda_aware_512_1.sqlite]... SKIPPED: profile_cuda_aware_512_1.sqlite does not contain OS Runtime trace data
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/nvtxsum.py profile_cuda_aware_512_1.sqlite]... 
+
+ Time(%)  Total Time (ns)  Instances    Average     Minimum    Maximum   StdDev    Style         Range      
+ -------  ---------------  ---------  -----------  ---------  ---------  -------  -------  -----------------
+    56.2        139932428          1  139932428.0  139932428  139932428      0.0  PushPop  MPI:MPI_Init     
+    42.2        105076209          1  105076209.0  105076209  105076209      0.0  PushPop  MPI:MPI_Finalize 
+     1.4          3379073        248      13625.3       4378     401148  48579.8  PushPop  MPI:MPI_Allreduce
+     0.3           633914       2988        212.2        100      33604    774.9  PushPop  MPI:MPI_Sendrecv 
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/openmpevtsum.py profile_cuda_aware_512_1.sqlite]... SKIPPED: profile_cuda_aware_512_1.sqlite does not contain OpenMP event data.
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/vulkanmarkerssum.py profile_cuda_aware_512_1.sqlite]... SKIPPED: profile_cuda_aware_512_1.sqlite does not contain Vulkan Debug Extension (Vulkan Debug Util) data
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/pixsum.py profile_cuda_aware_512_1.sqlite]... SKIPPED: profile_cuda_aware_512_1.sqlite does not contain DX11/DX12 CPU debug markers
+
+Running [/nfs/c3po/software/spack/opt/spack/linux-ubuntu20.04-x86_64/gcc-9.3.0/cuda-11.4.1-zifvu2wfu67oekj2l6fgp6hbt3xsfjsf/nsight-systems-2021.2.4/target-linux-x64/reports/khrdebugsum.py profile_cuda_aware_512_1.sqlite]... SKIPPED: profile_cuda_aware_512_1.sqlite does not contain KHR Extension (KHR_DEBUG) data
+

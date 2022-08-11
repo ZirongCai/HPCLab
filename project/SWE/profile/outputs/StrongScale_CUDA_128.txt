@@ -1,0 +1,3 @@
+cpu total time = 0.010225 , cpu+communication total time = 0.010549
+cpu total time = 0.011927 , cpu+communication total time = 0.013023
+cpu total time = 0.011576 , cpu+communication total time = 0.016725

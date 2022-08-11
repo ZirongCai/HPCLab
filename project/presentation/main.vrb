@@ -1,0 +1,29 @@
+\frametitle{Conclusion}
+\vskip1em
+    \begin{columns}
+        \begin{column}[t]{0.45\textwidth}
+            \begin{itemize}
+                \item Successfully implemented CUDA-Aware MPI for SWE
+                \item Fixed some bugs of the original code
+                \item Achieved almost the same performance as the normal cuda version using CUDA-Aware-MPI without GPUDiect support
+            \end{itemize}
+        \end{column}
+        %
+        % \begin{minipage}[t]{0.04\textwidth}
+        % \end{minipage}
+        %
+        \begin{minipage}[t]{0.45\textwidth}
+        %\fontsize{2}{1}
+        \begin{figure}
+            %\includegraphics[width=.7\textwidth, height=.4\textheight]{figs/SpeedUp_Eff_COMM_CUDA.png}\\
+            %\vspace{0.2cm}
+            \includegraphics[width=.9\textwidth]{figs/final_optimized.png}
+            \caption{CUDA-Aware MPI - Final performance}
+            \end{figure}
+        \end{minipage}
+    \end{columns}
+
+
+    %  synchGhostLayerAfterWrite();
+    %  synchCopyLayerBeforeRead()
+

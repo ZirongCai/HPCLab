@@ -1,0 +1,103 @@
+#include<mpi.h>
+#include<stdio.h>
+#include <stdlib.h>
+
+/* A two-dimensional processes in a 2x2 grid */
+int main(int argc, char *argv[])
+{
+	int rank, size;
+	MPI_Comm comm;
+	int dim[2], period[2], reorder;
+	int coord[2], id;
+
+	MPI_Init(&argc, &argv);
+	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+	MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+	dim[0]=2; dim[1]=2;
+	period[0]=0; period[1]=0;
+	reorder=0;
+	MPI_Cart_create(MPI_COMM_WORLD, 2, dim, period, reorder, &comm);
+	MPI_Cart_coords(comm, rank, 2, coord);
+
+	// Create comm group by row
+	int remain_dims[2]; remain_dims[0]=0; remain_dims[1]=1;
+	MPI_Comm comm_row;
+	MPI_Cart_sub(comm, remain_dims, &comm_row);
+
+	//// Determind each row_rank (not 2d rank)
+	int my_row_rank;
+	MPI_Comm_rank(comm_row, &my_row_rank);
+	int row_coord;
+	MPI_Cart_coords(comm_row, my_row_rank, 1, &row_coord);
+
+	// Create comm group by column
+	int remain_dims2[2]; remain_dims2[0]=1; remain_dims2[1]=0;
+	MPI_Comm comm_column;
+	MPI_Cart_sub(comm, remain_dims2, &comm_column);
+
+	// Determind each row_rank (not 2d rank)
+	int my_column_rank;
+	MPI_Comm_rank(comm_column, &my_column_rank);
+	int column_coord;
+	MPI_Cart_coords(comm_column, my_column_rank, 1, &column_coord);
+
+	if (rank == 1)
+	{
+		printf("Rank %d coordinates are %d %d\n",  rank, coord[0], coord[1]);
+		printf("Row_rank %d coordinates are %d\n", my_row_rank, row_coord);
+	}
+
+	// Test with Scatter
+    int gsize,recvarray[2][4],*rptr; 
+    int root, *sendbuf, myrank, bufsize, *stride; 
+    MPI_Datatype rtype; 
+    int i, *displs, *scounts, offset;
+
+	if (rank == 0) {
+		stride = (int *)malloc(size*sizeof(int));
+		displs = (int *)malloc(gsize*sizeof(int)); 
+		scounts = (int *)malloc(gsize*sizeof(int)); 
+		offset = 0; 
+
+
+		double A[size*2][size*2];
+        int i,j;
+		/* Initialize the matrix.  Note that C has row-major storage */
+		for (j=0; j<size*2; j++) 
+			for (i=0; i<size*2; i++)
+				A[j][i] = i+j;
+        for (j=0; j<size*2; j++) {
+            for (i=0; i<size*2; i++) 
+                printf( "%d ", recvarray[j][i] );
+            printf( "\n" );
+        }
+		for (i=0; i<gsize; ++i) { 
+			displs[i] = offset; 
+			offset += stride[i]; 
+			scounts[i] = 2*size; 
+		} 
+		/* Create datatype for the column we are receiving 
+		 */ 
+		MPI_Type_vector( 2*size, 1, 8, MPI_INT, &rtype); 
+		MPI_Type_commit( &rtype ); 
+		rptr = &recvarray[0][myrank]; 
+		MPI_Scatterv( sendbuf, scounts, displs, MPI_INT, rptr, 1, rtype, 
+				root, comm_row);
+    }
+
+
+	/* Everyone can now print their local matrix */
+		if (rank == 1) {
+			printf( "Output for process %d\n", rank );
+            int i,j;
+			for (j=0; j<2; j++) {
+				for (i=0; i<8; i++) 
+					printf( "%d ", recvarray[i][j] );
+				printf( "\n" );
+			}
+			fflush( stdout );
+	} 
+	MPI_Finalize();
+	return 0;
+}

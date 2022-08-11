@@ -1,0 +1,291 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C++ Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.0.5.281 Build 20190815
+
+Compiler options: -c -Ofast -std=c++11 -march=core-avx2 -fargument-noalias-global -fno-alias -qopt-report-phase=vec,loop -qopt-report=5 -o kernel1.o -DALIGNMENT=64 -DM=128 -DN=128 -DK=128 -Dk_c=64 -Dm_c=64 -Dm_r=32 -Dn_r=32 -DOPT1 -DGEBP_RE -DPRINT_FORMAT
+
+Begin optimization report for: gebp_re(double *, double *, double *, double *, double *)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at kernel1.cpp(25,5)
+   remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+   remark #25452: Original Order found to be proper, but by a close margin
+   remark #15382: vectorization support: call to function memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+
+   LOOP BEGIN at kernel1.cpp(27,9)
+      remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+   LOOP END
+LOOP END
+
+LOOP BEGIN at kernel1.cpp(35,5)
+   remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+   remark #25452: Original Order found to be proper, but by a close margin
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at kernel1.cpp(36,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at kernel1.cpp(37,3)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at kernel1.cpp(41,17)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at kernel1.cpp(45,29)
+               remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+               remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+               remark #15388: vectorization support: reference pA[start_pA+jj] has aligned access   [ kernel1.cpp(46,38) ]
+               remark #15305: vectorization support: vector length 4
+               remark #15427: loop was completely unrolled
+               remark #15399: vectorization support: unroll factor set to 8
+               remark #15309: vectorization support: normalized vectorization overhead 0.018
+               remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+               remark #15448: unmasked aligned unit stride loads: 2 
+               remark #15449: unmasked aligned unit stride stores: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 10 
+               remark #15477: vector cost: 1.750 
+               remark #15478: estimated potential speedup: 5.610 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+         LOOP END
+
+         LOOP BEGIN at kernel1.cpp(54,29)
+            remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+            remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+            remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(55,44) ]
+            remark #15305: vectorization support: vector length 4
+            remark #15427: loop was completely unrolled
+            remark #15399: vectorization support: unroll factor set to 8
+            remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+            remark #15448: unmasked aligned unit stride loads: 2 
+            remark #15449: unmasked aligned unit stride stores: 1 
+            remark #15475: --- begin vector cost summary ---
+            remark #15476: scalar cost: 8 
+            remark #15477: vector cost: 1.250 
+            remark #15478: estimated potential speedup: 6.400 
+            remark #15488: --- end vector cost summary ---
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: gebp(double *, double *, double *, double *, double *)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at kernel1.cpp(72,5)
+   remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(72,33) ]
+LOOP END
+
+LOOP BEGIN at kernel1.cpp(75,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at kernel1.cpp(76,9)
+      remark #25461: Imperfect Loop Unroll-Jammed by 2   (pre-vector) 
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at kernel1.cpp(78,13)
+         remark #15388: vectorization support: reference subC[j*128+jj] has aligned access   [ kernel1.cpp(79,19) ]
+         remark #15388: vectorization support: reference subC[j*128+jj] has aligned access   [ kernel1.cpp(79,19) ]
+         remark #15388: vectorization support: reference pA[ii*64+jj] has aligned access   [ kernel1.cpp(79,37) ]
+         remark #15388: vectorization support: reference subC[j*128+jj] has aligned access   [ kernel1.cpp(79,19) ]
+         remark #15388: vectorization support: reference subC[j*128+jj] has aligned access   [ kernel1.cpp(79,19) ]
+         remark #15388: vectorization support: reference pA[ii*64+jj] has aligned access   [ kernel1.cpp(79,37) ]
+         remark #15305: vectorization support: vector length 4
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.036
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 3 
+         remark #15449: unmasked aligned unit stride stores: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 19 
+         remark #15477: vector cost: 3.500 
+         remark #15478: estimated potential speedup: 5.380 
+         remark #15488: --- end vector cost summary ---
+         remark #25456: Number of Array Refs Scalar Replaced In Loop: 8
+         remark #25015: Estimate of max trip count of loop=4
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================
+
+Begin optimization report for: gepp(double *, double *, double *, double *, double *, double *)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at kernel1.cpp(87,5)
+   remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(87,31) ]
+LOOP END
+
+LOOP BEGIN at kernel1.cpp(90,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at kernel1.cpp(25,5) inlined into kernel1.cpp(93,9)
+      remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+      remark #25452: Original Order found to be proper, but by a close margin
+      remark #15382: vectorization support: call to function memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+      remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+
+      LOOP BEGIN at kernel1.cpp(27,9) inlined into kernel1.cpp(93,9)
+         remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at kernel1.cpp(35,5) inlined into kernel1.cpp(93,9)
+      remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+      remark #25452: Original Order found to be proper, but by a close margin
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at kernel1.cpp(36,9) inlined into kernel1.cpp(93,9)
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at kernel1.cpp(37,3) inlined into kernel1.cpp(93,9)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at kernel1.cpp(41,17) inlined into kernel1.cpp(93,9)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at kernel1.cpp(45,29) inlined into kernel1.cpp(93,9)
+                  remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+                  remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+                  remark #15388: vectorization support: reference pA[start_pA+jj] has aligned access   [ kernel1.cpp(46,38) ]
+                  remark #15305: vectorization support: vector length 4
+                  remark #15427: loop was completely unrolled
+                  remark #15399: vectorization support: unroll factor set to 8
+                  remark #15309: vectorization support: normalized vectorization overhead 0.018
+                  remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+                  remark #15448: unmasked aligned unit stride loads: 2 
+                  remark #15449: unmasked aligned unit stride stores: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 10 
+                  remark #15477: vector cost: 1.750 
+                  remark #15478: estimated potential speedup: 5.610 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+            LOOP END
+
+            LOOP BEGIN at kernel1.cpp(54,29) inlined into kernel1.cpp(93,9)
+               remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+               remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+               remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(55,44) ]
+               remark #15305: vectorization support: vector length 4
+               remark #15427: loop was completely unrolled
+               remark #15399: vectorization support: unroll factor set to 8
+               remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+               remark #15448: unmasked aligned unit stride loads: 2 
+               remark #15449: unmasked aligned unit stride stores: 1 
+               remark #15475: --- begin vector cost summary ---
+               remark #15476: scalar cost: 8 
+               remark #15477: vector cost: 1.250 
+               remark #15478: estimated potential speedup: 6.400 
+               remark #15488: --- end vector cost summary ---
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+kernel1.cpp(17:36)::_Z4geppPdS_S_S_S_S_:  Assume directive not useful: removing
+
+kernel1.cpp(18:36)::_Z4geppPdS_S_S_S_S_:  Assume directive not useful: removing
+
+===========================================================================
+
+Begin optimization report for: dgemm_opt(double *, double *, double *, double *, double *, double *)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at kernel1.cpp(103,5)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at kernel1.cpp(87,5) inlined into kernel1.cpp(105,9)
+      remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(87,31) ]
+   LOOP END
+
+   LOOP BEGIN at kernel1.cpp(90,5) inlined into kernel1.cpp(105,9)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at kernel1.cpp(25,5) inlined into kernel1.cpp(105,9)
+         remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+         remark #25452: Original Order found to be proper, but by a close margin
+         remark #15382: vectorization support: call to function memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+         remark #15344: loop was not vectorized: vector dependence prevents vectorization
+         remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+         remark #15346: vector dependence: assumed OUTPUT dependence between call:memcpy(void *, const void *, size_t) (28:13) and call:memcpy(void *, const void *, size_t) (28:13)
+
+         LOOP BEGIN at kernel1.cpp(27,9) inlined into kernel1.cpp(105,9)
+            remark #15527: loop was not vectorized: function call to memcpy(void *, const void *, size_t) cannot be vectorized   [ kernel1.cpp(28,13) ]
+         LOOP END
+      LOOP END
+
+      LOOP BEGIN at kernel1.cpp(35,5) inlined into kernel1.cpp(105,9)
+         remark #25095: Loop Interchange not done due to: User Function Inside Loop Nest
+         remark #25452: Original Order found to be proper, but by a close margin
+         remark #15542: loop was not vectorized: inner loop was already vectorized
+
+         LOOP BEGIN at kernel1.cpp(36,9) inlined into kernel1.cpp(105,9)
+            remark #15542: loop was not vectorized: inner loop was already vectorized
+
+            LOOP BEGIN at kernel1.cpp(37,3) inlined into kernel1.cpp(105,9)
+               remark #15542: loop was not vectorized: inner loop was already vectorized
+
+               LOOP BEGIN at kernel1.cpp(41,17) inlined into kernel1.cpp(105,9)
+                  remark #15542: loop was not vectorized: inner loop was already vectorized
+
+                  LOOP BEGIN at kernel1.cpp(45,29) inlined into kernel1.cpp(105,9)
+                     remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+                     remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(46,25) ]
+                     remark #15388: vectorization support: reference pA[start_pA+jj] has aligned access   [ kernel1.cpp(46,38) ]
+                     remark #15305: vectorization support: vector length 4
+                     remark #15427: loop was completely unrolled
+                     remark #15399: vectorization support: unroll factor set to 8
+                     remark #15309: vectorization support: normalized vectorization overhead 0.018
+                     remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+                     remark #15448: unmasked aligned unit stride loads: 2 
+                     remark #15449: unmasked aligned unit stride stores: 1 
+                     remark #15475: --- begin vector cost summary ---
+                     remark #15476: scalar cost: 10 
+                     remark #15477: vector cost: 1.750 
+                     remark #15478: estimated potential speedup: 5.610 
+                     remark #15488: --- end vector cost summary ---
+                  LOOP END
+               LOOP END
+
+               LOOP BEGIN at kernel1.cpp(54,29) inlined into kernel1.cpp(105,9)
+                  remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+                  remark #15388: vectorization support: reference subC[start_C+jj] has aligned access   [ kernel1.cpp(55,21) ]
+                  remark #15388: vectorization support: reference C_aux[jj] has aligned access   [ kernel1.cpp(55,44) ]
+                  remark #15305: vectorization support: vector length 4
+                  remark #15427: loop was completely unrolled
+                  remark #15399: vectorization support: unroll factor set to 8
+                  remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+                  remark #15448: unmasked aligned unit stride loads: 2 
+                  remark #15449: unmasked aligned unit stride stores: 1 
+                  remark #15475: --- begin vector cost summary ---
+                  remark #15476: scalar cost: 8 
+                  remark #15477: vector cost: 1.250 
+                  remark #15478: estimated potential speedup: 6.400 
+                  remark #15488: --- end vector cost summary ---
+               LOOP END
+            LOOP END
+         LOOP END
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

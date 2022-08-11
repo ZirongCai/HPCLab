@@ -1,0 +1,13 @@
+## For visualisation
+For creating output.gnuplot, we used: `mpirun -np 4 ./parallel 0.001 10000 0.0000001 2 2`  
+For gnuplot: `plot "solution_parallel.gnuplot" using 1:2:3 with points palette`  
+
+## How to run
+- Compile it as normal with 'make'  
+- `serial`: binary resulted from original code  
+- `parallel`: CG with parallel solver  
+- IMPORTANT: need to remove all *.gnuplot file before running the program. One can remove those file with:
+`make cleandata`  
+- Execute the parallel binary with:  
+`mpirun -np <ntasks> ./parallel <gridsize> <max_niters> <eps> <TopoX> <TopoY>`  
+- For performance test, please comment out 'store_grid' functions in main.cpp  
